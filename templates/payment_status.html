@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Update Payment Status</h2>
+<form method="POST">
+    <label for="tenant_name">Tenant Name:</label>
+    <input type="text" name="tenant_name" required>
+    <label for="apartment_id">Apartment ID:</label>
+    <input type="text" name="apartment_id" required>
+    <label for="status">Payment Status:</label>
+    <select name="status" required>
+        <option value="Paid">Paid</option>
+        <option value="Pending">Pending</option>
+    </select>
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

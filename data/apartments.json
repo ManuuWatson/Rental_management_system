@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "landlord_id": 3,
+        "name": "kimagasta",
+        "units": 54,
+        "location": "nyeri"
+    },
+    {
+        "id": 2,
+        "landlord_id": 3,
+        "name": "safe stay",
+        "units": 67,
+        "location": "near sunrise"
+    },
+    {
+        "id": 3,
+        "landlord_id": 2,
+        "name": "safe stay",
+        "units": 50,
+        "location": "near sunrise"
+    },
+    {
+        "id": 4,
+        "landlord_id": 2,
+        "name": "G-town",
+        "units": 12,
+        "location": "G"
+    },
+    {
+        "id": 5,
+        "landlord_id": 2,
+        "name": "kimagasta",
+        "units": 55,
+        "location": "Sunrise"
+    },
+    {
+        "id": 6,
+        "landlord_id": 2,
+        "landlord_name": "manuu",
+        "name": null,
+        "units": 56,
+        "location": null
+    },
+    {
+        "id": 7,
+        "landlord_id": 2,
+        "landlord_name": "manuu",
+        "name": null,
+        "units": 5,
+        "location": null
+    },
+    {
+        "id": 8,
+        "landlord_id": 2,
+        "landlord_name": "manuu",
+        "name": null,
+        "units": 7,
+        "location": null
+    },
+    {
+        "id": 9,
+        "landlord_id": 2,
+        "landlord_name": "manuu",
+        "name": null,
+        "units": 7,
+        "location": "vvv"
+    },
+    {
+        "id": 10,
+        "landlord_id": 2,
+        "landlord_name": "manuu",
+        "name": null,
+        "units": 7,
+        "location": "nu"
+    },
+    {
+        "id": 11,
+        "landlord_id": 17,
+        "landlord_name": "jj",
+        "name": null,
+        "units": 78,
+        "location": "bgf"
+    }
+]

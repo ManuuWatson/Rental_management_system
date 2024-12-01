@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Update Details</h2>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    <label for="field">Field to Update:</label>
+    <select name="field" required>
+        <option value="contact">Contact</option>
+        <option value="address">Address</option>
+    </select>
+    <label for="new_value">New Value:</label>
+    <input type="text" name="new_value" required>
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

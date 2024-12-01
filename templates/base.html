@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Management</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">Rental Management</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <!--  <li><a href="{{ url_for('transaction_report') }}">Reports</a></li>-->
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Dynamic Content Placeholder -->
+        {% block content %}
+        <header class="hero-section">
+            <h1>Welcome to Rental Management</h1>
+            <p>Your trusted platform for seamless rental and property management.</p>
+        </header>
+
+        <section class="features">
+            <h2>Why Choose Us?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Easy Registration</h3>
+                    <p>Get started with a simple registration process for tenants and landlords.</p>
+                </div>
+                <div class="card">
+                    <h3>Manage Properties</h3>
+                    <p>Tenants can find their ideal homes, and landlords can manage their properties with ease.</p>
+                </div>
+                <div class="card">
+                    <h3>Secure Payments</h3>
+                    <p>All transactions are handled securely with integrated payment systems.</p>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Rental Management | All Rights Reserved</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    
+</body>
+</html>

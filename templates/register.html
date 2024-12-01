@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST">
+            <div>
+                <label for="role">Role:</label>
+                <select name="role" required>
+                    <option value="tenant">Tenant</option>
+                    <option value="landlord">Landlord</option>
+                </select>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+            </div>
+            <div>
+                <label for="contact">Contact:</label>
+                <input type="text" name="contact" required>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" name="address" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+{% endblock %}

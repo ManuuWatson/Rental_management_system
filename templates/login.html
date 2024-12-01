@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Login</h2>
+        <form method="POST" action="{{ url_for('login') }}">
+            <!-- Role Field -->
+            <div>
+                <label for="role">Role:</label>
+                <select name="role" required>
+                    <option value="landlord">Landlord</option>
+                    <option value="tenant">Tenant</option>
+                </select>
+            </div>
+            <!-- Username Field -->
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" required>
+            </div>
+            <!-- Password Field -->
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Flash messages display -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="flash {{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+{% endblock %}

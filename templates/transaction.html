@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction Report</title>
+</head>
+<body>
+    <h1>Transaction Report</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tenant Name</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in data %}
+            <tr>
+                <td>{{ transaction.tenant_name }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

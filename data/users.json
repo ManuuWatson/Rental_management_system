@@ -1,0 +1,276 @@
+[
+    {
+        "id": 1,
+        "role": "landlord",
+        "name": "kevo",
+        "contact": "4342",
+        "address": "hksk",
+        "password": "1111",
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 2,
+        "role": "landlord",
+        "name": "manuu",
+        "contact": "4566",
+        "address": "nyeri",
+        "password": "2222",
+        "apartments": [
+            {
+                "id": 6,
+                "landlord_id": 2,
+                "landlord_name": "manuu",
+                "name": null,
+                "units": 56,
+                "location": null
+            },
+            {
+                "id": 7,
+                "landlord_id": 2,
+                "landlord_name": "manuu",
+                "name": null,
+                "units": 5,
+                "location": null
+            },
+            {
+                "id": 8,
+                "landlord_id": 2,
+                "landlord_name": "manuu",
+                "name": null,
+                "units": 7,
+                "location": null
+            },
+            {
+                "id": 9,
+                "landlord_id": 2,
+                "landlord_name": "manuu",
+                "name": null,
+                "units": 7,
+                "location": "vvv"
+            },
+            {
+                "id": 10,
+                "landlord_id": 2,
+                "landlord_name": "manuu",
+                "name": null,
+                "units": 7,
+                "location": "nu"
+            }
+        ],
+        "tenants": []
+    },
+    {
+        "id": 3,
+        "role": "landlord",
+        "name": "kevin",
+        "contact": "4567",
+        "address": "nairobi",
+        "password": "3333",
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 4,
+        "role": "landlord",
+        "name": "victor",
+        "contact": "39900",
+        "address": "lkfnk",
+        "password": "4444",
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 5,
+        "role": "landlord",
+        "name": "Bazill",
+        "contact": "66896382",
+        "address": "byw",
+        "password": "1111",
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 6,
+        "role": "landlord",
+        "name": "kipngeno",
+        "contact": "t3tuto",
+        "address": "o423u02",
+        "password": "1111",
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 7,
+        "role": "landlord",
+        "name": "dennis ",
+        "contact": "jnjonjg",
+        "address": "gfelere",
+        "password": "1111",
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 8,
+        "name": "ben",
+        "password": "1111",
+        "role": "landlord",
+        "contact": "5445",
+        "address": "jvjhfdvfv",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 9,
+        "name": "vn",
+        "password": "1111",
+        "role": "landlord",
+        "contact": "thh",
+        "address": "hrh",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 10,
+        "name": "bn",
+        "password": "3333",
+        "role": "landlord",
+        "contact": "rfe",
+        "address": "wrfw",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 11,
+        "name": "ccc",
+        "password": "4444",
+        "role": "landlord",
+        "contact": "fb",
+        "address": "rgr",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 12,
+        "name": "vvv",
+        "password": "5555",
+        "role": "landlord",
+        "contact": "ree",
+        "address": "rgre",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 13,
+        "name": "ttt",
+        "password": "6666",
+        "role": "landlord",
+        "contact": "bbvb",
+        "address": "gfd",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 14,
+        "name": "dd",
+        "password": "1234",
+        "role": "landlord",
+        "contact": "dfdsf",
+        "address": "dfd",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 15,
+        "name": "gg",
+        "password": "4321",
+        "role": "landlord",
+        "contact": "rfwe",
+        "address": "wffw",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    },
+    {
+        "id": 16,
+        "name": "mmm",
+        "password": "mmmm",
+        "role": "tenant",
+        "contact": "sdfvsdv",
+        "address": "vv",
+        "total_apartments": null,
+        "total_tenants": null,
+        "rent_collected": null,
+        "pending_payments": null,
+        "apartments": null,
+        "tenants": null
+    },
+    {
+        "id": 17,
+        "name": "jj",
+        "password": "0000",
+        "role": "landlord",
+        "contact": "fvfvv",
+        "address": "gege",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [
+            {
+                "id": 11,
+                "landlord_id": 17,
+                "landlord_name": "jj",
+                "name": null,
+                "units": 78,
+                "location": "bgf"
+            }
+        ],
+        "tenants": []
+    },
+    {
+        "id": 18,
+        "name": "vk ",
+        "password": "1234",
+        "role": "landlord",
+        "contact": "3t4",
+        "address": "vvv",
+        "total_apartments": 0,
+        "total_tenants": 0,
+        "rent_collected": 0.0,
+        "pending_payments": 0.0,
+        "apartments": [],
+        "tenants": []
+    }
+]

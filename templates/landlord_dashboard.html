@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Rental Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Apartments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tenants</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <!-- Welcome Message -->
+        <h1>Welcome, {{ data.landlord['name'] }}</h1> <!-- Show the landlord's name here -->
+
+        <h1 class="mb-4">Landlord Dashboard</h1>
+
+        <!-- Overview Cards -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Apartments</h5>
+                        <p class="card-text">{{ data.total_apartments }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-info mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Tenants</h5>
+                        <p class="card-text">{{ data.total_tenants }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Rent Collected</h5>
+                        <p class="card-text">${{ data.rent_collected }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending Payments</h5>
+                        <p class="card-text">${{ data.pending_payments }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Apartment Button -->
+        <div class="d-flex justify-content-between align-items-center my-3">
+            <h2>Apartments</h2>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addApartmentModal">Add Apartment</button>
+        </div>
+
+        <!-- Apartments Table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Apartment</th>
+                    <th>Units</th>
+                    <th>Vacancies</th>
+                    <th>Location</th> <!-- Added Location column -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for apartment in data.apartments %}
+                    <tr>
+                        <td>{{ apartment.name }}</td>
+                        <td>{{ apartment.units }}</td>
+                        <td>{{ apartment.vacancies }}</td>
+                        <td>{{ apartment.location }}</td> <!-- Displaying location here -->
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4" class="text-center">No apartments available</td> <!-- Adjusted colspan for 4 columns -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Tenants Table -->
+        <h2>Tenants</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Apartment</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tenant in data.tenants %}
+                    <tr>
+                        <td>{{ tenant.name }}</td>
+                        <td>{{ tenant.apartment }}</td>
+                        <td>{{ tenant.status }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3" class="text-center">No tenants available</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Apartment Modal -->
+    <div class="modal fade" id="addApartmentModal" tabindex="-1" aria-labelledby="addApartmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="POST" action="{{ url_for('add_apartment') }}">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addApartmentModalLabel">Add Apartment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="apartmentName" class="form-label">Apartment Name</label>
+                            <input type="text" class="form-control" id="apartmentName" name="apartment_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="units" class="form-label">Number of Units</label>
+                            <input type="number" class="form-control" id="units" name="units" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="vacancies" class="form-label">Vacancies</label>
+                            <input type="number" class="form-control" id="vacancies" name="vacancies" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label> <!-- Added Location field -->
+                            <input type="text" class="form-control" id="location" name="location" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Apartment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
